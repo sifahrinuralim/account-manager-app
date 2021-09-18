@@ -1,0 +1,16 @@
+<!--Form Search-->
+<div>
+    <form class="search" id="search_user"  onsubmit="clickSearch()">
+            <button type="submit"><i class="fa fa-search"></i></button>
+            <input id="inputSearch" type="text" placeholder="Search Phone Number..">
+            <a href="/user-list"><i class="fas fa-minus-circle"></i></a>
+    </form>
+</div>
+
+<script>
+    function clickSearch () {
+        var src = "http://localhost:8000/user-list/" + document.getElementById("inputSearch").value
+        var formLink = document.getElementById("search_user")
+        formLink.action = src
+    }
+</script>

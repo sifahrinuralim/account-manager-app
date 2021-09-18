@@ -1,0 +1,17 @@
+<% for(var i = 0; i < userData.length; i++) { %>
+    <tr>
+        <td><%= userData[i].first_name %></td>
+        <td><%= userData[i].last_name %></td>
+        <td><%= userData[i].email %></td>
+        <td><%= userData[i].position %></td>
+        <td><%= userData[i].phone_number %></td>
+        <td>
+            <a href="/update-user/<%= userData[i].id%>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <a href="/delete-user/<%= userData[i].id%>" class="btn border-shadow delete">
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>

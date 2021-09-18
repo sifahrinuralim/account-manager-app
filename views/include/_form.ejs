@@ -1,0 +1,59 @@
+<!--Form Handling-->
+<form action="/api/v1/register" method="POST" id="add_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="first_name" class="text-light">First Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="first_name" value="" placeholder="Ahmad">
+        </div>
+
+        <div class="form-group">
+            <label for="last_name" class="text-light">Last Name</label>
+            <input type="text" name="last_name" value="" placeholder="Abrar">
+        </div>
+
+        <div class="form-group">
+            <label for="email" class="text-light">Email</label>
+            <input type="text" name="email" value="" placeholder="ahmadabrar@gmail.com">
+        </div>
+
+        <div class="form-group">
+            <label for="position" class="text-light">Position</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="position" value="Front-End">
+                <label for="radio-2" class="radio-label">Front-End</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="position" value="Back-End">
+                <label for="radio-3" class="radio-label">Back-End</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="position" value="Designer">
+                <label for="radio-4" class="radio-label">Designer</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="position" value="devOps">
+                <label for="radio-5" class="radio-label">devOps</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="phone_number" class="text-light">Phone Number</label>
+            <input type="text" name="phone_number" value="" placeholder="08112282299">
+        </div>
+
+        <div class="form-group">
+            <label for="password" class="text-light">Password</label>
+            <input type="password" name="password" value="" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="password" class="text-light">Confirm Password</label>
+            <input type="password" name="confirmPassword" value="" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-button update">Save</button>
+        </div>
+    </div>
+</form>

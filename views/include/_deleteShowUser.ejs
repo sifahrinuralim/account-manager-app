@@ -1,0 +1,52 @@
+<!--Form Update-->
+<form method="POST" id="delete_user" onsubmit="clickDelete()">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="first_name" class="text-light">First Name</label>
+            <input type="hidden" id="idFormUpdate" name="id" value="<%= dataGetUpdate['id'] %>">
+            <input disabled type="text" name="first_name" value="<%= dataGetUpdate['first_name'] %>">
+        </div>
+
+        <div class="form-group">
+            <label for="position class=" text-light">Position</label>
+
+            <div class="radio inline">
+                <input disabled type="radio" id="radio-2" name="position" value="Front-End"
+                    <%=dataGetUpdate['position']=='Front-End' ? 'checked' :'' %>>
+                <label for="radio-2" class="radio-label">Front-End</label>
+            </div>
+            <div class="radio inline">
+                <input disabled type="radio" id="radio-3" name="position" value="Back-End"
+                    <%=dataGetUpdate['position']=='Back-End' ? 'checked' :'' %>>
+                <label for="radio-3" class="radio-label">Back-End</label>
+            </div>
+            <div class="radio inline">
+                <input disabled type="radio" id="radio-4" name="position" value="Designer"
+                    <%=dataGetUpdate['position']=='Designer' ? 'checked' :'' %>>
+                <label for="radio-4" class="radio-label">Designer</label>
+            </div>
+            <div class="radio inline">
+                <input disabled type="radio" id="radio-5" name="position" value="devOps"
+                    <%=dataGetUpdate['position']=='devOps' ? 'checked' :'' %>>
+                <label for="radio-5" class="radio-label">devOps</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="phone_number" class="text-light">Phone Number</label>
+            <input disabled type="text" name="phone_number" value="<%= dataGetUpdate['phone_number'] %>">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-button update">Delete</button>
+        </div>
+    </div>
+</form>
+
+<script>
+    function clickDelete () {
+        var src = "http://localhost:8000/api/v1/delete/" + document.getElementById("idFormUpdate").value
+        var formLink = document.getElementById("delete_user")
+        formLink.action = src
+    }
+</script>
